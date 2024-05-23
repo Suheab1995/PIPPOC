@@ -2,7 +2,10 @@ name: SampleWorkflow
 
 # Controls when the workflow will run
 on:
-  workflow_dispatch:
+    repository_dispatch:
+     types: 
+      - sampleevent
+
 
 jobs:
   SampleBuild1:
@@ -13,16 +16,5 @@ jobs:
         run: echo ${{github.workflow_id}}
       - name: Run a multi-line script
         run: |
-          echo Hello world2,
-          echo Hello world3.
-  SampleBuild2:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - name: Run a multi-line script
-        run: |
-          echo Hello world4,
-          echo Hello world5.
-    
+          echo "This is from jenkins pipeline "
+          echo "sample one"
