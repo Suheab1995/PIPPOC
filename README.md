@@ -1,1 +1,1 @@
-sample1
+git remote set-url origin https://Suheab1995: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@github.com/Suheab1995/PIPPOC.git
