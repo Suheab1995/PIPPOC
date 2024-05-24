@@ -19,3 +19,4 @@ jobs:
           echo "This is from jenkins pipeline "
           echo "sample one"
           echo "added a first line1"
+          echo "second line"
